@@ -26,7 +26,6 @@ public class PersonController {
     @Inject
     PersonRepository personRepository;
 
-
     @Get("test")
     public String getPerson(Long pId){
         return "test";
