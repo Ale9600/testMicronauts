@@ -4,7 +4,6 @@ import core.masterdata.module.entities.Person;
 import core.masterdata.module.repositories.BookRepository;
 import core.masterdata.module.repositories.PersonRepository;
 import core.masterdata.module.services.PersonService;
-import io.micronaut.context.ApplicationContext;
 import io.micronaut.core.version.annotation.Version;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
@@ -24,13 +23,12 @@ public class PersonController {
     @Inject
     BookRepository bookRepository;
 
-    @Get("find")
-    public String getPerson(Long pId){
+    @Inject
+    PersonRepository personRepository;
 
-        Optional<Person> person;
-        System.out.println(personService.find(pId));
-        System.out.println(pId);
-        return "ciao";
-        //return (person.getName());
+
+    @Get("test")
+    public String getPerson(Long pId){
+        return "test";
     }
 }

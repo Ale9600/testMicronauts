@@ -1,24 +1,9 @@
-
 plugins {
-    id 'java'
-    id 'io.micronaut.library' version "3.4.1"
 }
 
 group 'com.example'
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    implementation("io.micronaut:micronaut-http-client")
-    implementation("io.micronaut:micronaut-jackson-databind")
-    implementation("jakarta.annotation:jakarta.annotation-api")
-    runtimeOnly("ch.qos.logback:logback-classic")
-    implementation("io.micronaut:micronaut-validation")
-    implementation("mysql:mysql-connector-java")
     implementation project (":masterdata")
 }
 
