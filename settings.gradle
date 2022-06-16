@@ -1,6 +1,5 @@
-rootProject.name="demo"
+rootProject.name="testMicronaut"
 
-include 'moduloprova'
 include 'Main'
 include 'masterdata'
 
